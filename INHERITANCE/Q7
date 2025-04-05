@@ -1,0 +1,72 @@
+class Human {
+    String name;
+    int age;
+
+    public void setHuman(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void showHuman() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Employee extends Human {
+    String company;
+    double salary;
+
+    public void setEmployee(String company, double salary) {
+        this.company = company;
+        this.salary = salary;
+    }
+
+    public void showEmployee() {
+        showHuman();
+        System.out.println("Company: " + company);
+        System.out.println("Salary: ₹" + salary);
+    }
+}
+
+class Student extends Human {
+    String university;
+    String course;
+
+    public void setStudent(String university, String course) {
+        this.university = university;
+        this.course = course;
+    }
+
+    public void showStudent() {
+        showHuman();
+        System.out.println("University: " + university);
+        System.out.println("Course: " + course);
+    }
+}
+
+class TeachingAssistant {
+    Employee emp = new Employee();
+    Student stu = new Student();
+
+    public void setTAInfo(String name, int age, String company, double salary, String university, String course) {
+        emp.setHuman(name, age);
+        emp.setEmployee(company, salary);
+        stu.setHuman(name, age);
+        stu.setStudent(university, course);
+    }
+
+    public void showTAInfo() {
+        System.out.println("----- Teaching Assistant Info -----");
+        emp.showEmployee();
+        stu.showStudent();
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        TeachingAssistant ta = new TeachingAssistant();
+        ta.setTAInfo("Aryan Verma", 24, "TechSoft", 30000, "IIT Delhi", "M.Tech CSE");
+        ta.showTAInfo();
+    }
+}
