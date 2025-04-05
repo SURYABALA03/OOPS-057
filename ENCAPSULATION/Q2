@@ -1,0 +1,32 @@
+class BankAccount {
+    private long accountNumber;
+    private double balance;
+
+    public void setAccountNumber(long accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public long getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0)
+            balance += amount;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        BankAccount acc = new BankAccount();
+        acc.setAccountNumber(9876543210L);
+        acc.deposit(15000.75);
+
+        System.out.println("Account Number: " + acc.getAccountNumber());
+        System.out.println("Available Balance: ₹" + acc.getBalance());
+    }
+}
