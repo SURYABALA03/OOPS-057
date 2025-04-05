@@ -1,0 +1,26 @@
+interface Payment {
+    void payAmount(double amount);
+}
+
+class UpiPayment implements Payment {
+    public void payAmount(double amount) {
+        System.out.println("Paid ₹" + amount + " via UPI.");
+    }
+}
+
+class CardPayment implements Payment {
+    public void payAmount(double amount) {
+        System.out.println("Paid ₹" + amount + " via Credit/Debit Card.");
+    }
+}
+
+public class j1{
+    public static void main(String[] args) {
+        Payment p1 = new UpiPayment();
+        Payment p2 = new CardPayment();
+
+        p1.payAmount(999.50);
+        p2.payAmount(2500);
+    }
+}
+
