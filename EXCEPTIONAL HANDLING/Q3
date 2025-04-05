@@ -1,0 +1,19 @@
+class AgeNotValidException extends Exception { 
+    public AgeNotValidException(String message) { 
+        super(message); 
+    } 
+} 
+  
+public class CustomExceptionExample { 
+    public static void main(String[] args) { 
+        try { 
+            int age = 16;  // Invalid age 
+            if (age < 18) { 
+                throw new AgeNotValidException("Age must be 18 or older."); 
+            } 
+            System.out.println("Age is valid."); 
+        } catch (AgeNotValidException e) { 
+            System.out.println("Error: " + e.getMessage()); 
+        } 
+    } 
+} 
