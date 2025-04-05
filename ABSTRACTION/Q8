@@ -1,0 +1,33 @@
+abstract class Vehicle {
+    abstract void showDetails();
+}
+
+class Car extends Vehicle {
+    String brand = "Hyundai";
+    String fuel = "Petrol";
+
+    void showDetails() {
+        System.out.println("Car Brand: " + brand);
+        System.out.println("Fuel Type: " + fuel);
+    }
+}
+
+class Bike extends Vehicle {
+    String brand = "Royal Enfield";
+    String fuel = "Petrol";
+
+    void showDetails() {
+        System.out.println("Bike Brand: " + brand);
+        System.out.println("Fuel Type: " + fuel);
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Vehicle v1 = new Car();
+        Vehicle v2 = new Bike();
+
+        v1.showDetails();
+        v2.showDetails();
+    }
+}
