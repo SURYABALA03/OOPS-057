@@ -1,0 +1,9 @@
+import java.util.Random;
+
+public class j1 {
+    public static void main(String[] args) {
+        Random rand = new Random();
+        int otp = 100000 + rand.nextInt(900000); // 6-digit OTP
+        System.out.println("Generated OTP: " + otp);
+    }
+}
