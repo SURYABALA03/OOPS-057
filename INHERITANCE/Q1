@@ -1,1 +1,44 @@
+class Person {
+    String name;
+    int age;
+
+    public void setPersonDetails(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void showPersonDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Employee extends Person {
+    int empId;
+    String department;
+
+    public void setEmployeeDetails(int empId, String department) {
+        this.empId = empId;
+        this.department = department;
+    }
+
+    public void showEmployeeDetails() {
+        System.out.println("Employee ID: " + empId);
+        System.out.println("Department: " + department);
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        emp.setPersonDetails("Rahul Verma", 28);
+        emp.setEmployeeDetails(1001, "IT");
+
+        System.out.println("Person Details:");
+        emp.showPersonDetails();
+
+        System.out.println("\nEmployee Details:");
+        emp.showEmployeeDetails();
+    }
+}
 
