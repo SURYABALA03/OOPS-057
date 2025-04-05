@@ -1,0 +1,64 @@
+class Person {
+    String name;
+    int age;
+
+    public void setPersonDetails(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void showPersonDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Teacher extends Person {
+    String subject;
+    int experience; // in years
+
+    public void setTeacherDetails(String subject, int experience) {
+        this.subject = subject;
+        this.experience = experience;
+    }
+
+    public void showTeacherDetails() {
+        showPersonDetails();
+        System.out.println("Subject: " + subject);
+        System.out.println("Experience: " + experience + " years");
+    }
+}
+
+class Student extends Person {
+    String course;
+    int rollNo;
+
+    public void setStudentDetails(String course, int rollNo) {
+        this.course = course;
+        this.rollNo = rollNo;
+    }
+
+    public void showStudentDetails() {
+        showPersonDetails();
+        System.out.println("Course: " + course);
+        System.out.println("Roll No: " + rollNo);
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Teacher t = new Teacher();
+        t.setPersonDetails("Dr. Arvind Kumar", 45);
+        t.setTeacherDetails("Physics", 20);
+
+        Student s = new Student();
+        s.setPersonDetails("Ritika Sharma", 20);
+        s.setStudentDetails("BSc Physics", 1024);
+
+        System.out.println("----- Teacher Details -----");
+        t.showTeacherDetails();
+
+        System.out.println("\n----- Student Details -----");
+        s.showStudentDetails();
+    }
+}
