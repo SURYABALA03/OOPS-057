@@ -1,0 +1,73 @@
+class Device {
+    String brand;
+    int warrantyYears;
+
+    public void setDevice(String brand, int warrantyYears) {
+        this.brand = brand;
+        this.warrantyYears = warrantyYears;
+    }
+
+    public void showDevice() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Warranty: " + warrantyYears + " years");
+    }
+}
+
+class Mobile extends Device {
+    String os;
+    int ramGB;
+
+    public void setMobile(String brand, int warrantyYears, String os, int ramGB) {
+        setDevice(brand, warrantyYears);
+        this.os = os;
+        this.ramGB = ramGB;
+    }
+
+    public void showMobile() {
+        showDevice();
+        System.out.println("OS: " + os);
+        System.out.println("RAM: " + ramGB + " GB");
+    }
+}
+
+class Laptop extends Device {
+    String processor;
+    int storageGB;
+
+    public void setLaptop(String brand, int warrantyYears, String processor, int storageGB) {
+        setDevice(brand, warrantyYears);
+        this.processor = processor;
+        this.storageGB = storageGB;
+    }
+
+    public void showLaptop() {
+        showDevice();
+        System.out.println("Processor: " + processor);
+        System.out.println("Storage: " + storageGB + " GB");
+    }
+}
+
+class TechUser {
+    Mobile mob = new Mobile();
+    Laptop lap = new Laptop();
+
+    public void setTechDetails() {
+        mob.setMobile("Samsung", 2, "Android", 8);
+        lap.setLaptop("HP", 3, "Intel i7", 512);
+    }
+
+    public void showTechDetails() {
+        System.out.println("----- Mobile Details -----");
+        mob.showMobile();
+        System.out.println("\n----- Laptop Details -----");
+        lap.showLaptop();
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        TechUser user = new TechUser();
+        user.setTechDetails();
+        user.showTechDetails();
+    }
+}
