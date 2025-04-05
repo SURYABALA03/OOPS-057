@@ -1,0 +1,18 @@
+public class main { 
+    public static void main(String[] args) { 
+        try { 
+            String number = "abc"; 
+            int num = Integer.parseInt(number);  // This will throw NumberFormatException 
+  
+            int result = 10 / 0;  // This will throw ArithmeticException 
+        } catch (NumberFormatException e) { 
+            System.out.println("Error: Invalid number format."); 
+        } catch (ArithmeticException e) { 
+            System.out.println("Error: Division by zero."); 
+        } finally { 
+            System.out.println("Execution completed."); 
+        } 
+    } 
+} 
+
+
