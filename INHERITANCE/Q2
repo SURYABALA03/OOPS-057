@@ -1,0 +1,43 @@
+class Vehicle {
+    String brand;
+    String model;
+
+    public void setVehicleDetails(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public void showVehicleDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+    }
+}
+
+class Car extends Vehicle {
+    String engineType;
+    int fuelCapacity;
+
+    public void setCarDetails(String engineType, int fuelCapacity) {
+        this.engineType = engineType;
+        this.fuelCapacity = fuelCapacity;
+    }
+
+    public void showCarDetails() {
+        System.out.println("Engine Type: " + engineType);
+        System.out.println("Fuel Capacity: " + fuelCapacity + " liters");
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.setVehicleDetails("Hyundai", "Creta");
+        car.setCarDetails("Petrol", 45);
+
+        System.out.println("Vehicle Details:");
+        car.showVehicleDetails();
+
+        System.out.println("\nCar Details:");
+        car.showCarDetails();
+    }
+}
