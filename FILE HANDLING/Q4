@@ -1,0 +1,17 @@
+import java.io.*;
+
+public class j1 {
+    public static void main(String[] args) {
+        String keyword = "Java";
+        try (BufferedReader br = new BufferedReader(new FileReader("notes.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.contains(keyword)) {
+                    System.out.println(line);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
