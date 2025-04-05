@@ -1,0 +1,60 @@
+class Person {
+    String name;
+    int age;
+
+    public void setPersonDetails(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void showPersonDetails() {
+        System.out.println("Name       : " + name);
+        System.out.println("Age        : " + age);
+    }
+}
+
+class Employee extends Person {
+    int empId;
+    String department;
+
+    public void setEmployeeDetails(int empId, String department) {
+        this.empId = empId;
+        this.department = department;
+    }
+
+    public void showEmployeeDetails() {
+        System.out.println("Employee ID: " + empId);
+        System.out.println("Department : " + department);
+    }
+}
+
+class Manager extends Employee {
+    int teamSize;
+    String projectName;
+
+    public void setManagerDetails(int teamSize, String projectName) {
+        this.teamSize = teamSize;
+        this.projectName = projectName;
+    }
+
+    public void showManagerDetails() {
+        System.out.println("Team Size  : " + teamSize);
+        System.out.println("Project    : " + projectName);
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Manager mgr = new Manager();
+
+        mgr.setPersonDetails("Riya Kapoor", 35);
+        mgr.setEmployeeDetails(2001, "IT");
+        mgr.setManagerDetails(8, "SmartCity App");
+
+        System.out.println("----- Manager Profile -----");
+        mgr.showPersonDetails();
+        mgr.showEmployeeDetails();
+        mgr.showManagerDetails();
+    }
+}
+
