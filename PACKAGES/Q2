@@ -1,0 +1,13 @@
+# utilities_demo.py
+from utilities import string_utils
+
+test_string = "hello"
+reversed_string = string_utils.reverse_string(test_string)
+
+palindrome_string1 = "madam"
+palindrome_string2 = "python"
+
+print(f"Reversed string of '{test_string}': {reversed_string}")
+print(f"'{palindrome_string1}' is a palindrome: {string_utils.is_palindrome(palindrome_string1)}")
+print(f"'{palindrome_string2}' is a palindrome: {string_utils.is_palindrome(palindrome_string2)}")
+
