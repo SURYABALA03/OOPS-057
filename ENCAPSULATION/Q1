@@ -1,0 +1,42 @@
+class Student {
+    private String name;
+    private int rollNo;
+    private double percentage;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
+    }
+
+    public void setPercentage(double percentage) {
+        this.percentage = percentage;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRollNo() {
+        return rollNo;
+    }
+
+    public double getPercentage() {
+        return percentage;
+    }
+}
+
+public class StudentReport {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.setName("Priya Sharma");
+        s1.setRollNo(1001);
+        s1.setPercentage(88.5);
+
+        System.out.println("Student Name: " + s1.getName());
+        System.out.println("Roll Number: " + s1.getRollNo());
+        System.out.println("Percentage: " + s1.getPercentage() + "%");
+    }
+}
