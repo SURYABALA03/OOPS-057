@@ -1,0 +1,25 @@
+interface Printable {
+    void printDetails();
+}
+
+class Invoice implements Printable {
+    public void printDetails() {
+        System.out.println("Printing Invoice: #INV-1023");
+    }
+}
+
+class Report implements Printable {
+    public void printDetails() {
+        System.out.println("Printing Monthly Sales Report...");
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Printable doc1 = new Invoice();
+        Printable doc2 = new Report();
+
+        doc1.printDetails();
+        doc2.printDetails();
+    }
+}
