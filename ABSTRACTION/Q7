@@ -1,0 +1,27 @@
+abstract class Test {
+    abstract void startTest();
+}
+
+class MathTest extends Test {
+    void startTest() {
+        System.out.println("Starting Math Test...");
+        System.out.println("Solve algebra and geometry questions.");
+    }
+}
+
+class EnglishTest extends Test {
+    void startTest() {
+        System.out.println("Starting English Test...");
+        System.out.println("Answer comprehension and grammar questions.");
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Test t1 = new MathTest();
+        Test t2 = new EnglishTest();
+
+        t1.startTest();
+        t2.startTest();
+    }
+}
