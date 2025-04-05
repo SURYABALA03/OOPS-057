@@ -1,0 +1,59 @@
+class Vehicle {
+    String brand;
+    String model;
+
+    public void setVehicle(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+    }
+
+    public void showVehicle() {
+        System.out.println("Brand : " + brand);
+        System.out.println("Model : " + model);
+    }
+}
+
+class Car extends Vehicle {
+    String fuelType;
+    double mileage;
+
+    public void setCar(String fuelType, double mileage) {
+        this.fuelType = fuelType;
+        this.mileage = mileage;
+    }
+
+    public void showCar() {
+        System.out.println("Fuel Type: " + fuelType);
+        System.out.println("Mileage  : " + mileage + " km/l");
+    }
+}
+
+class ElectricCar extends Car {
+    int batteryCapacity;
+    double chargingTime;
+
+    public void setElectricCar(int batteryCapacity, double chargingTime) {
+        this.batteryCapacity = batteryCapacity;
+        this.chargingTime = chargingTime;
+    }
+
+    public void showElectricCar() {
+        System.out.println("Battery   : " + batteryCapacity + " kWh");
+        System.out.println("Charge Time: " + chargingTime + " hrs");
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        ElectricCar ec = new ElectricCar();
+
+        ec.setVehicle("Tata", "Nexon EV");
+        ec.setCar("Electric", 312);
+        ec.setElectricCar(40, 6.5);
+
+        System.out.println("----- Electric Car Info -----");
+        ec.showVehicle();
+        ec.showCar();
+        ec.showElectricCar();
+    }
+}
