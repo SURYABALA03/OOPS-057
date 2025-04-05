@@ -1,0 +1,36 @@
+interface VehicleControl {
+    void start();
+    void stop();
+}
+
+class Car implements VehicleControl {
+    public void start() {
+        System.out.println("Car engine started with key.");
+    }
+
+    public void stop() {
+        System.out.println("Car engine stopped.");
+    }
+}
+
+class Bike implements VehicleControl {
+    public void start() {
+        System.out.println("Bike started with kick.");
+    }
+
+    public void stop() {
+        System.out.println("Bike engine turned off.");
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        VehicleControl v1 = new Car();
+        VehicleControl v2 = new Bike();
+
+        v1.start();
+        v1.stop();
+        v2.start();
+        v2.stop();
+    }
+}
