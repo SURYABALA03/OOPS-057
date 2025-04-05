@@ -1,0 +1,16 @@
+import java.io.*;
+public class j1 {
+    public static void main(String[] args) {
+        int wordCount = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader("words.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] words = line.trim().split("\\s+");
+                wordCount += words.length;
+            }
+            System.out.println("Total words: " + wordCount);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
