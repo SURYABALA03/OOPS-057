@@ -1,0 +1,48 @@
+class Book { 
+    String title; 
+    String author; 
+    double price; 
+  
+    // Default Constructor 
+    Book() { 
+        title = "Unknown Title"; 
+        author = "Unknown Author"; 
+        price = 0.0; 
+    } 
+  
+    // Parameterized Constructor (Title and Author) 
+    Book(String title, String author) { 
+        this.title = title; 
+        this.author = author; 
+        this.price = 0.0; // Default price 
+    } 
+  
+    // Parameterized Constructor (Title, Author, and Price) 
+    Book(String title, String author, double price) { 
+        this.title = title; 
+        this.author = author; 
+        this.price = price; 
+    } 
+  
+    // Method to display book details 
+    void display() { 
+        System.out.println("Title: " + title); 
+        System.out.println("Author: " + author); 
+        System.out.println("Price: $" + price); 
+        System.out.println("----------------------"); 
+    } 
+  
+    public static void main(String[] args) { 
+        // Using Default Constructor 
+        Book b1 = new Book(); 
+        b1.display(); 
+  
+        // Using Constructor with Title and Author 
+        Book b2 = new Book("Harry Potter", "J.K. Rowling"); 
+        b2.display(); 
+  
+        // Using Constructor with Title, Author, and Price 
+        Book b3 = new Book("The Alchemist", "Paulo Coelho", 15.99); 
+        b3.display(); 
+    } 
+} 
