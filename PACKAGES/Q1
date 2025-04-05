@@ -1,0 +1,17 @@
+# geometry_demo.py
+from geometry import circle, rectangle
+
+circle_radius = 5
+circle_area = circle.area(circle_radius)
+circle_circumference = circle.circumference(circle_radius)
+
+rectangle_length = 4
+rectangle_width = 6
+rectangle_area = rectangle.area(rectangle_length, rectangle_width)
+rectangle_perimeter = rectangle.perimeter(rectangle_length, rectangle_width)
+
+print(f"Circle Area: {circle_area}")
+print(f"Circle Circumference: {circle_circumference}")
+print(f"Rectangle Area: {rectangle_area}")
+print(f"Rectangle Perimeter: {rectangle_perimeter}")
+
