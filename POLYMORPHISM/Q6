@@ -1,0 +1,32 @@
+class BankAccount {
+    void displayAccountType() {
+        System.out.println("This is a generic bank account.");
+    }
+}
+
+class SavingsAccount extends BankAccount {
+    // Overriding the method
+    void displayAccountType() {
+        System.out.println("This is a Savings Account. Interest is applied.");
+    }
+}
+
+class CurrentAccount extends BankAccount {
+    // Overriding the method
+    void displayAccountType() {
+        System.out.println("This is a Current Account. No interest, but has overdraft facility.");
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        BankAccount acc1 = new BankAccount();
+        BankAccount acc2 = new SavingsAccount();  // Polymorphism
+        BankAccount acc3 = new CurrentAccount();  // Polymorphism
+
+        acc1.displayAccountType();
+        acc2.displayAccountType(); // Calls overridden method
+        acc3.displayAccountType(); // Calls overridden method
+    }
+}
+
