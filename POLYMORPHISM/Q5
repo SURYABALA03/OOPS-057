@@ -1,0 +1,19 @@
+class Animal { 
+   public void displayInfo() { 
+      System.out.println("A is an animal."); 
+   } 
+} 
+ 
+class Dog extends Animal { 
+   @Override 
+   public void displayInfo() { 
+      System.out.println("B is a dog."); 
+   } 
+} 
+ 
+class Main { 
+   public static void main(String[] args) { 
+      Dog d1 = new Dog(); 
+      d1.displayInfo(); 
+   } 
+} 
