@@ -1,0 +1,65 @@
+class Appliance {
+    String brand;
+    int powerWatts;
+
+    public void setApplianceDetails(String brand, int powerWatts) {
+        this.brand = brand;
+        this.powerWatts = powerWatts;
+    }
+
+    public void showApplianceDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Power Rating: " + powerWatts + "W");
+    }
+}
+
+class Fan extends Appliance {
+    int speedLevels;
+    double bladeSize;
+
+    public void setFanDetails(int speedLevels, double bladeSize) {
+        this.speedLevels = speedLevels;
+        this.bladeSize = bladeSize;
+    }
+
+    public void showFanDetails() {
+        showApplianceDetails();
+        System.out.println("Speed Levels: " + speedLevels);
+        System.out.println("Blade Size: " + bladeSize + " inches");
+    }
+}
+
+class AirConditioner extends Appliance {
+    double tonnage;
+    String coolingMode;
+
+    public void setACDetails(double tonnage, String coolingMode) {
+        this.tonnage = tonnage;
+        this.coolingMode = coolingMode;
+    }
+
+    public void showACDetails() {
+        showApplianceDetails();
+        System.out.println("Tonnage: " + tonnage + " Ton");
+        System.out.println("Cooling Mode: " + coolingMode);
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Fan fan = new Fan();
+        fan.setApplianceDetails("Orient", 75);
+        fan.setFanDetails(3, 48);
+
+        AirConditioner ac = new AirConditioner();
+        ac.setApplianceDetails("LG", 1500);
+        ac.setACDetails(1.5, "Turbo Cool");
+
+        System.out.println("----- Fan Details -----");
+        fan.showFanDetails();
+
+        System.out.println("\n----- Air Conditioner Details -----");
+        ac.showACDetails();
+    }
+}
+
