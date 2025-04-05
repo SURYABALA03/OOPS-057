@@ -1,0 +1,15 @@
+import java.io.*;
+
+public class j1 {
+    public static void main(String[] args) {
+        int count = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader("sample.txt"))) {
+            while (br.readLine() != null) {
+                count++;
+            }
+            System.out.println("Total number of lines: " + count);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
