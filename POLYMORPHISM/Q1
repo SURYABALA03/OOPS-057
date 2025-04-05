@@ -1,0 +1,30 @@
+class Book {
+    String title;
+    String author;
+    double price;
+
+    // Parameterized constructor
+    Book(String title, String author, double price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+
+    void displayBookInfo() {
+        System.out.println("Book Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Price: ₹" + price);
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        Book b1 = new Book("The Alchemist", "Paulo Coelho", 399.99);
+        Book b2 = new Book("Atomic Habits", "James Clear", 450.50);
+
+        System.out.println("----- Book 1 -----");
+        b1.displayBookInfo();
+        System.out.println("\n----- Book 2 -----");
+        b2.displayBookInfo();
+    }
+}
