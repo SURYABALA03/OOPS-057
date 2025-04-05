@@ -1,0 +1,35 @@
+class MovieTicket {
+    private String movieName;
+    private String seatNumber;
+    private double price;
+
+    public void setTicket(String movieName, String seatNumber, double price) {
+        this.movieName = movieName;
+        this.seatNumber = seatNumber;
+        this.price = price;
+    }
+
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public String getSeatNumber() {
+        return seatNumber;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+}
+
+public class j1 {
+    public static void main(String[] args) {
+        MovieTicket ticket = new MovieTicket();
+        ticket.setTicket("Dunki", "A10", 250.00);
+
+        System.out.println("🎬 Movie: " + ticket.getMovieName());
+        System.out.println("🎟️ Seat: " + ticket.getSeatNumber());
+        System.out.println("💰 Price: ₹" + ticket.getPrice());
+    }
+}
+
